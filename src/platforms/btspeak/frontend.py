@@ -284,7 +284,7 @@ def main() -> int:
                 break
             action = menu_session(worker, dialogs, preferences, units)
             if action == "resume":
-                host.say(_("Exit menu"), immediate=True, wait=True, as_ui=True)
+                host.say(_("Menu closed"), immediate=True, wait=True, as_ui=True)
             if action == "quit":
                 break
             if action.startswith("unit:"):

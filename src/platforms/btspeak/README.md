@@ -86,7 +86,7 @@ first start; Type 'n Speak uses its own cold setup. An existing saved state take
 The host menu offers Resume, Save memory, Quick key response, Audio settings, Firmware, Keyboard help, and Save and exit.
 The normal BT dialog controls apply while in the host menu. Menus and submenus share one terminal screen,
 and returning from a submenu keeps the previously selected row. Audio settings opens on Sound buffer.
-Leaving the host menu with Z-chord (Escape) or Resume announces "Exit menu" before the firmware resumes.
+Leaving the host menu with Z-chord (Escape) or Resume announces "Menu closed" before the firmware resumes.
 
 The keyboard introduction is shown once per saved-memory directory, with the acknowledgement stored in
 `preferences.json`. Existing preferences without that flag show it once after updating. Keyboard help
