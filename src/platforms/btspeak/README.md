@@ -84,7 +84,12 @@ first start; Type 'n Speak uses its own cold setup. An existing saved state take
 | Other panel keys and all routing keys | Unassigned |
 
 The host menu offers Resume, Save memory, Quick key response, Audio settings, Firmware, Keyboard help, and Save and exit.
-The normal BT dialog controls apply while in the host menu.
+The normal BT dialog controls apply while in the host menu. Menus and submenus share one terminal screen,
+and returning from a submenu keeps the previously selected row. Audio settings opens on Sound buffer.
+
+The keyboard introduction is shown once per saved-memory directory, with the acknowledgement stored in
+`preferences.json`. Existing preferences without that flag show it once after updating. Keyboard help
+remains available from the host menu.
 
 Z-chord with Dot 7 uses the platform's existing `Tools/deep-escape`, after the emulator has saved and restored
 its host context. The helper runs detached from the terminal it closes, using noninteractive sudo when needed,

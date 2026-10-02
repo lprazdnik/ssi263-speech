@@ -24,7 +24,7 @@ class AudioMenuTests(unittest.TestCase):
 
     def dialogs(self, choices):
         return SimpleNamespace(request_choice=Mock(side_effect=[None if key is None else SimpleNamespace(key=key) for key in choices]),
-                               show_message=Mock(), activity=lambda text: contextlib.nullcontext())
+                               show_message=Mock(), activity=lambda text, **kwargs: contextlib.nullcontext())
 
     def test_all_controls_persist_without_losing_unit_or_quick_response(self):
         self.prefs.store(True, unit='bl-es')
