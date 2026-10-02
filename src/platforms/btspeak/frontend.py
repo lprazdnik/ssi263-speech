@@ -130,7 +130,7 @@ def host_menu(worker: Worker, dialogs: ModuleType, preferences: Preferences,
         if choice.key == "s":
             with dialogs.activity(_("Saving memory"), stdscr=stdscr):
                 worker.request("SAVE", "SAVED")
-            dialogs.show_message(_("Memory saved."), stdscr=stdscr)
+            dialogs.show_message(_("Memory saved."), wait=False, wait_for_speech=True, stdscr=stdscr)
         elif choice.key == "h":
             if BY_KEY[preferences.unit].kind == "tns":
                 dialogs.show_message(_(
@@ -290,7 +290,7 @@ def main() -> int:
             if action.startswith("unit:"):
                 selected = action[5:]
                 try:
-                    with dialogs.activity(_("Switching firmware")):
+                    with dialogs.activity(_("Switching to {name}").format(name=BY_KEY[selected].label)):
                         candidate = start_unit(selected)
                 except (OSError, WorkerError) as exc:
                     dialogs.show_message(_("Could not switch firmware: {error}").format(error=exc))

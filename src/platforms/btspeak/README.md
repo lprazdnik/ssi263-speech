@@ -87,6 +87,7 @@ The host menu offers Resume, Save memory, Quick key response, Audio settings, Fi
 The normal BT dialog controls apply while in the host menu. Menus and submenus share one terminal screen,
 and returning from a submenu keeps the previously selected row. Audio settings opens on Sound buffer.
 Leaving the host menu with Z-chord (Escape) or Resume announces "Menu closed" before the firmware resumes.
+Save memory announces "Memory saved" and returns to the menu without requiring Enter.
 
 The keyboard introduction is shown once per saved-memory directory, with the acknowledgement stored in
 `preferences.json`. Existing preferences without that flag show it once after updating. Keyboard help
@@ -117,6 +118,7 @@ extra chords. There is no translated text input, capital-letter shortcut, or sub
 
 Open **M-chord with Dot 7 → Audio settings**. Choices are kept in `preferences.json` and apply across
 firmware switches and launches. Saved audio choices are preserved; preferences without a buffer setting use Automatic.
+Buffer choices use the short labels Automatic, Medium, and Long; Audio help explains their timing.
 
 | Control | Choices | Initial default |
 | --- | --- | --- |
@@ -146,6 +148,7 @@ preference write restores the previous audio settings. Use **Back** or cancel to
 Open M-chord with Dot 7, then **Firmware**. The menu lists installed, supported firmware with a factory
 state or an existing saved memory. A failed switch leaves the previous unit available; a successful switch
 saves it before running the new unit. The choice is remembered, or override it with `--unit bl-en` etc.
+The switch announcement names the selected model and language.
 The same nested and flat firmware-folder layouts as the original terminal emulator are accepted.
 
 | Unit ID | Firmware | Saved memory | Braille |
