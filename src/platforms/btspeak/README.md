@@ -64,7 +64,7 @@ Optional arguments:
 ./build/linux/blazie_emu_bt --device default
 ```
 
-The initial default is 22050 Hz with the long (250 ms) audio buffer. Audio choices are remembered;
+The initial default is 22050 Hz with the automatic audio buffer (starting at 60 ms). Audio choices are remembered;
 `--rate` overrides and saves the sample rate for this and later runs. Sound-device
 failure is reported; it does not silently continue without a voice. Braille Lite and Braille 'n Speak require a factory state on the
 first start; Type 'n Speak uses its own cold setup. An existing saved state takes precedence; a damaged state is reported instead of reset.
@@ -116,11 +116,11 @@ extra chords. There is no translated text input, capital-letter shortcut, or sub
 ## Audio settings
 
 Open **M-chord with Dot 7 → Audio settings**. Choices are kept in `preferences.json` and apply across
-firmware switches and launches. Existing preferences without audio settings retain the previous defaults.
+firmware switches and launches. Saved audio choices are preserved; preferences without a buffer setting use Automatic.
 
 | Control | Choices | Initial default |
 | --- | --- | --- |
-| Sound buffer | Automatic (starts at 60 ms and grows up to 250 ms if playback runs dry), Medium (100 ms), Long (250 ms) | Long |
+| Sound buffer | Automatic (starts at 60 ms and grows up to 250 ms if playback runs dry), Medium (100 ms), Long (250 ms) | Automatic |
 | Sample rate | 11025, 16000, 22050, 32000, 44100, 48000 Hz | 22050 Hz |
 | Idle sound | Silent, hiss, whine, original unit behavior | Original unit behavior |
 | Keep channel open | During speech only, until firmware switches off, always | Until firmware switches off |

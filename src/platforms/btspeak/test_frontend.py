@@ -116,7 +116,7 @@ class FrontendTests(unittest.TestCase):
         self.assertEqual(menu_session(worker, dialogs, prefs, {"bl-en": "English"}), "resume")
         dialogs.curses_wrapper_low_level2.assert_called_once()
         worker.request.assert_not_called()
-        self.assertEqual(calls, [("Blazie emulator", "r"), ("Audio settings", "b"), ("Sound buffer", "long"),
+        self.assertEqual(calls, [("Blazie emulator", "r"), ("Audio settings", "b"), ("Sound buffer", "auto"),
                                 ("Audio settings", "b"), ("Blazie emulator", "o"), ("Choose firmware", "bl-en"),
                                 ("Blazie emulator", "f")])
 
