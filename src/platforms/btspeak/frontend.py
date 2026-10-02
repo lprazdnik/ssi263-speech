@@ -283,6 +283,8 @@ def main() -> int:
                 exit_to_editor = True
                 break
             action = menu_session(worker, dialogs, preferences, units)
+            if action == "resume":
+                host.say(_("Exit menu"), immediate=True, wait=True, as_ui=True)
             if action == "quit":
                 break
             if action.startswith("unit:"):
