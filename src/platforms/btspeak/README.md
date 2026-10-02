@@ -118,7 +118,7 @@ extra chords. There is no translated text input, capital-letter shortcut, or sub
 
 Open **M-chord with Dot 7 → Audio settings**. Choices are kept in `preferences.json` and apply across
 firmware switches and launches. Saved audio choices are preserved; preferences without a buffer setting use Automatic.
-Buffer choices use the short labels Automatic, Medium, and Long; Audio help explains their timing.
+Buffer labels include their timing: Automatic starts at 60 ms and increases if needed, Medium is 100 ms, and Long is 250 ms.
 
 | Control | Choices | Initial default |
 | --- | --- | --- |

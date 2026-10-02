@@ -12,7 +12,8 @@ from worker import Worker, WorkerError
 
 
 def audio_menu(worker: Worker, dialogs: ModuleType, preferences: Preferences, *, stdscr: curses.window | None = None) -> None:
-    buffers = {"auto": _("Automatic"), "medium": _("Medium"), "long": _("Long")}
+    buffers = {"auto": _("Automatic (starts at 60 ms, increases if needed)"),
+               "medium": _("Medium (100 ms)"), "long": _("Long (250 ms)")}
     idle = {"0": _("Silent"), "1": _("Hiss"), "2": _("Whine"), "3": _("Original unit behavior")}
     keep = {"0": _("During speech only"), "1": _("Until the firmware switches off"), "2": _("Always")}
     rates = {str(rate): _("{rate} Hz").format(rate=rate) for rate in RATES}
